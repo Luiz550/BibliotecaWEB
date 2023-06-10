@@ -1,0 +1,41 @@
+﻿@model teste.DATA.Models.Cliente
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalhes do Cliente</h1>
+
+<div>
+    <h4>Cliente</h4>
+    <hr />
+    <div>
+    <a asp-action="Edit" class="btn btn-success" asp-route-id="@Model.IdCliente">Alterar</a> 
+    <a class="btn btn-primary" asp-action="Index">Voltar</a>
+</div>
+
+       <div class="card"> 
+                   <div class="card-header">Informações do cliente</div>
+                   <div class ="card-body">
+    <dl class="row">
+        <dt class = "col-sm-2">
+                    @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class = "col-sm-10">
+                    @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+                    @Html.DisplayNameFor(model => model.Endereço)
+        </dt>
+        <dd class = "col-sm-10">
+                    @Html.DisplayFor(model => model.Endereço)
+        </dd>
+        <dt class = "col-sm-2">
+                    @Html.DisplayNameFor(model => model.Telefone)
+        </dt>
+        <dd class = "col-sm-10">
+                    @Html.DisplayFor(model => model.Telefone)
+        </dd>
+    </dl>
+   </div>
+</div>
